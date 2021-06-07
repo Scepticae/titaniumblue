@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto',
+    sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1485856407642-7f9ba0268b51?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  background-color: #3f72afdd;
+  min-height: 100vh;
+}
+
+.logo {
+  padding: 15px 50px 0;
+}
+
+.transition {
+  opacity: 0;
+  transition: opacity 0.7s ease-in 0.3s;
+}
+
+.logo-name {
+  color: #dbe2ef;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.t-logo {
+  color: #999999;
+  line-height: 1;
+  font-size: 6rem;
+  font-weight: 700;
+  text-shadow: -1.5px -1.5px 3px #112d4e;
+}
+
+.b-logo {
+  color: #3f72af;
+  line-height: 1;
+  font-size: 4rem;
+  font-weight: 300;
+  text-shadow: -1.5px -1.5px 3px #112d4e;
+}
+
+.subtitle {
+  color: #112d4e;
+  font-size: 1.2rem;
+}
+
+.active {
+  opacity: 1;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.strip {
+  background-color: #dbe2efcc;
+  min-width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+.content-container {
+  display: flex;
+}
+
+.content {
+  width: 60%;
+  padding: 50px;
+}
+
+.section-title {
+  color: #112d4e;
+}
+
+.section-subtitle {
+  margin-top: 30px;
+}
+
+.section-title span {
+  font-size: 3rem;
+  font-weight: lighter;
+  color: #3f72af;
+  text-shadow: 1px 1px 3px #112d4e;
+}
+
+.content p {
+  color: #112d4e;
+  line-height: 1.5;
+  padding: 30px 0;
+}
+
+.content p.contact-bar {
+  font-size: 1.2rem;
+  color: #3f72af;
+  text-shadow: 1px 1px 0.5px #112d4e;
+}
+
+.image {
+  width: 40%;
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+}
+
+hr {
+  background-color: #112d4e;
+  height: 1px;
+  border: none;
+}
+
+a.contact-link {
+  text-decoration: none;
+  color: #112d4e;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 1px 1px 0.5px #3f72af;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+
+footer h5 {
+  color: #112d4eaa;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 200px;
+  padding-left: 50px;
+  background-color: #112d4e;
+}
+
+nav ul {
+  list-style: none;
+  /* opacity: 0; */
+  /* transition: opacity 0.8s ease-in 0.4s; */
+}
+
+/* nav.active ul {
+  opacity: 1;
+} */
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav ul a li {
+  color: #dbe2ef;
+  margin: 50px 0;
+}
+
+nav ul a li:hover {
+  color: #3f72af;
+}
+
+form div {
+  display: inline-flex;
+  flex-direction: row;
+  width: 400px;
+  padding: 5px 0;
+  margin-right: 30px;
+}
+
+form div label {
+  min-width: 120px;
+  color: #112d4e;
+}
+
+form div input {
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 5px;
+  outline: none;
+}
+
+form div.textarea {
+  flex-direction: column;
+  padding-top: 10px;
+  width: 100%;
+  min-width: 400px;
+  max-width: 835px;
+}
+
+.textarea textarea {
+  margin-top: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px;
+}
+
+.submit input {
+  width: 100px;
+  padding: 5px;
+  color: white;
+  background-color: #112d4e;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1650px) {
+  form div {
+    width: 350px;
+  }
+
+  form div input {
+    width: 230px;
+  }
+
+  form div.textarea {
+    max-width: 735px;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  form div {
+    width: 300px;
+  }
+
+  form div input {
+    width: 180px;
+  }
+
+  form div.textarea {
+    max-width: 635px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  form div {
+    width: 250px;
+  }
+
+  form div input {
+    width: 130px;
+  }
+
+  form div.textarea {
+    max-width: 535px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  form div {
+    width: 100%;
+  }
+
+  form div input {
+    width: 100%;
+  }
+
+  form div.textarea {
+    min-width: 100%;
+  }
+}
