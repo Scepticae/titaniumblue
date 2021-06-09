@@ -2,8 +2,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/titarmre/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp /CSS/*.css $DEPLOYPATH
-    - /bin/cp /HTML/*.html $DEPLOYPATH
-    - /bin/cp /Images/* $DEPLOYPATH
-    - /bin/cp /JS/*.js $DEPLOYPATH
+    - cp index.html $DEPLOYPATH
+    - cp ./CSS/styles.css $DEPLOYPATH
+    - cp ./HTML/about.html $DEPLOYPATH
+    - cp ./HTML/contact.html $DEPLOYPATH
+    - cp ./HTML/portfolio.html $DEPLOYPATH
+    - cp ./HTML/process.html $DEPLOYPATH
+    - cp ./HTML/services.html $DEPLOYPATH
+    - cp ./JS/index.js $DEPLOYPATH
