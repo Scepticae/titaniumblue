@@ -3,6 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/titarmre/public_html
     - cp ./index.html $DEPLOYPATH
-    - cp ./CSS $DEPLOYPATH
+    - cp ./CSS/styles.css $DEPLOYPATH/CSS
     - cp ./HTML $DEPLOYPATH
-    - cp ./JS $DEPLOYPATH
+    - cp ./JS/index.js $DEPLOYPATH/JS
