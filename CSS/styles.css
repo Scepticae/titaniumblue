@@ -145,6 +145,17 @@ footer h5 {
   text-align: center;
 }
 
+i.menu-bar {
+  position: fixed;
+  display: none;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  z-index: 2;
+  color: #112d4e;
+  text-shadow: 1px 1px 1px white;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -157,13 +168,7 @@ nav {
 
 nav ul {
   list-style: none;
-  /* opacity: 0; */
-  /* transition: opacity 0.8s ease-in 0.4s; */
 }
-
-/* nav.active ul {
-  opacity: 1;
-} */
 
 nav ul a {
   text-decoration: none;
@@ -178,104 +183,87 @@ nav ul a li:hover {
   color: #3f72af;
 }
 
-form div {
-  display: inline-flex;
-  flex-direction: row;
-  width: 400px;
-  padding: 5px 0;
-  margin-right: 30px;
-}
-
-form div label {
-  min-width: 120px;
-  color: #112d4e;
-}
-
-form div input {
-  width: 100%;
-  border: none;
-  border-radius: 3px;
-  padding: 3px 5px;
-  outline: none;
-}
-
-form div.textarea {
-  flex-direction: column;
-  padding-top: 10px;
-  width: 100%;
-  min-width: 400px;
-  max-width: 835px;
-}
-
-.textarea textarea {
-  margin-top: 5px;
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  padding: 5px;
-}
-
-.submit input {
-  width: 100px;
-  padding: 5px;
-  color: white;
-  background-color: #112d4e;
-  margin-top: 10px;
-}
-
 /* Media Queries */
-@media only screen and (max-width: 1650px) {
-  form div {
-    width: 350px;
+@media only screen and (max-width: 1050px) {
+  i.menu-bar {
+    display: block;
+    transition: transform 0.7s ease 0.3s, color 0.7s ease 0.3s;
   }
 
-  form div input {
-    width: 230px;
+  i.menu-bar.show {
+    transform: rotateZ(90deg);
+    transition: transform 0.7s ease 0.3s, color 0.7s ease 0.3s;
+    color: #dbe2ef;
   }
 
-  form div.textarea {
-    max-width: 735px;
-  }
-}
-
-@media only screen and (max-width: 1450px) {
-  form div {
-    width: 300px;
+  nav {
+    transform: translateX(200px);
+    transition: transform 0.7s linear 0.3s;
   }
 
-  form div input {
-    width: 180px;
+  nav ul {
+    opacity: 0;
+    transition: opacity 0.8s ease-in 0.4s;
   }
 
-  form div.textarea {
-    max-width: 635px;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  form div {
-    width: 250px;
+  nav.show {
+    transform: translateX(0);
+    transition: transform 0.7s linear 0.3s;
   }
 
-  form div input {
-    width: 130px;
-  }
-
-  form div.textarea {
-    max-width: 535px;
+  nav.show ul {
+    opacity: 1;
   }
 }
 
-@media only screen and (max-width: 1150px) {
-  form div {
+@media only screen and (max-width: 900px) {
+  .content-container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
     width: 100%;
   }
 
-  form div input {
+  .image {
     width: 100%;
   }
 
-  form div.textarea {
-    min-width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo-name {
+    font-size: 2rem;
+  }
+
+  .t-logo {
+    font-size: 4.5rem;
+  }
+
+  .b-logo {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title span {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 12px;
   }
 }
